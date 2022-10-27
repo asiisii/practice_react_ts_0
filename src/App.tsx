@@ -1,8 +1,14 @@
-import React from 'react'
 import './App.css'
+import Greet from './components/Greet'
 
-function App() {
-	return <div className='app'>Vite - React - TypeScript - Practice</div>
+const App = () => {
+	return (
+		<div className='app'>
+			<Greet 
+        name='Asiisii'
+      />
+		</div>
+	)
 }
 
 export default App
