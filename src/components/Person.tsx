@@ -1,10 +1,10 @@
 import React from 'react'
 
 type PersonProps = {
-  name: {
-    first: string,
-    last: string,
-  }
+	name: {
+		first: string
+		last: string
+	}
 }
 const Person = (props: PersonProps) => {
 	return (
