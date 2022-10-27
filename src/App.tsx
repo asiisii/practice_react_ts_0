@@ -29,13 +29,14 @@ const App = () => {
 	return (
 		<div className='app'>
 			<Greet name='Asiisii' messageCount={10} isLoggedIn={false} />
+			<Greet name='Asiisii' isLoggedIn={false} />
 			<Person name={personName} />
 			<PersonList names={nameList} />
 			<Status status='loading' />
-      <Heading>test</Heading>
-      <Oscar>
-        <Heading>Oscar goes to me</Heading>
-      </Oscar>
+			<Heading>test</Heading>
+			<Oscar>
+				<Heading>Oscar goes to me</Heading>
+			</Oscar>
 		</div>
 	)
 }
