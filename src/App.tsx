@@ -1,5 +1,6 @@
 import './App.css'
 import Button from './components/Button'
+import Container from './components/Container'
 import Greet from './components/Greet'
 import Heading from './components/Heading'
 import Input from './components/Input'
@@ -32,9 +33,9 @@ const App = () => {
 					console.log('Button Clicked', event, id)
 				}}
 			/>
-      <Input 
-        value=''
-        handleChange={event => console.log('triggered')}
+			<Input value='' handleChange={event => console.log('triggered')} />
+			<Container 
+        styles={{ border: '1px solid black', padding: '1rem' }} 
       />
 		</div>
 	)
