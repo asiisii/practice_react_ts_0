@@ -13,6 +13,8 @@ import Box from './components/context/Box'
 import { UserContextProvider } from './components/context/UserContext'
 import User from './state/User'
 import Counter from './components/class/Counter'
+import Private from './components/auth/Private'
+import Profile from './components/auth/Profile'
 
 const App = () => {
 	const personName = { first: 'Asiisii', last: 'M' }
@@ -39,16 +41,15 @@ const App = () => {
 				}}
 			/>
 			<Input value='' handleChange={event => console.log('triggered')} />
-			<Container 
-        styles={{ border: '1px solid black', padding: '1rem' }} 
-      />
-      <ThemeContextProvider>
-        <Box />
-      </ThemeContextProvider>
-      <UserContextProvider>
-        <User />
-      </UserContextProvider>
-      <Counter message="hello" />
+			<Container styles={{ border: '1px solid black', padding: '1rem' }} />
+			<ThemeContextProvider>
+				<Box />
+			</ThemeContextProvider>
+			<UserContextProvider>
+				<User />
+			</UserContextProvider>
+			<Counter message='hello' />
+			<Private isLoggedIn={true} component={Profile} />
 		</div>
 	)
 }
