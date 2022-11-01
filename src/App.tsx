@@ -15,6 +15,7 @@ import User from './state/User'
 import Counter from './components/class/Counter'
 import Private from './components/auth/Private'
 import Profile from './components/auth/Profile'
+import List from './components/generics/List'
 
 const App = () => {
 	const personName = { first: 'Asiisii', last: 'M' }
@@ -50,6 +51,19 @@ const App = () => {
 			</UserContextProvider>
 			<Counter message='hello' />
 			<Private isLoggedIn={true} component={Profile} />
+			<List
+				items={['Batman', 'Superman', 'Wonder Woman']}
+				onClick={item => console.log(item)}
+			/>
+			<List items={[1, 2, 3]} onClick={item => console.log(item)} />
+			<List
+				items={[
+					{ first: 'a', last: 'b' },
+					{ first: 'c', last: 'd' },
+					{ first: 'e', last: 'f' },
+				]}
+				onClick={item => console.log(item)}
+			/>
 		</div>
 	)
 }
