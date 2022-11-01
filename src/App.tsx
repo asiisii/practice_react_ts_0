@@ -12,6 +12,7 @@ import { ThemeContextProvider } from './components/context/ThemeContext'
 import Box from './components/context/Box'
 import { UserContextProvider } from './components/context/UserContext'
 import User from './state/User'
+import Counter from './components/class/Counter'
 
 const App = () => {
 	const personName = { first: 'Asiisii', last: 'M' }
@@ -47,6 +48,7 @@ const App = () => {
       <UserContextProvider>
         <User />
       </UserContextProvider>
+      <Counter message="hello" />
 		</div>
 	)
 }
