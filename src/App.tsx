@@ -19,6 +19,7 @@ import List from './components/generics/List'
 import RandomNumber from './components/restriction/RandomNumber'
 import Toast from './components/templateliterals/Toast'
 import CustomButton from './components/html/Button'
+import Text from './components/polymorphic/Text'
 
 const App = () => {
 	const personName = { first: 'Asiisii', last: 'M' }
@@ -76,9 +77,19 @@ const App = () => {
 				{' '}
 				<div>Primary button</div>{' '}
 			</CustomButton> */}
-      {/* error: if we pass div elements because we have omit keyword thats omitting children from it being a componentprops */}
+			{/* error: if we pass div elements because we have omit keyword thats omitting children from it being a componentprops */}
 			{/* This JSX tag's 'children' prop expects a single child of type 'string',
 			but multiple children were provided. */}
+			<Text as='h1' size='lg'>
+				Heading
+			</Text>
+			<Text as='p' size='md'>
+				Paragraph
+			</Text>
+			<Text as='label' htmlFor='someid' size='sm'>
+				Label
+			</Text>
+      {/* cant have wrong attribute eg: htmlFor for h1 or other elements */}
 		</div>
 	)
 }
