@@ -18,6 +18,7 @@ import Profile from './components/auth/Profile'
 import List from './components/generics/List'
 import RandomNumber from './components/restriction/RandomNumber'
 import Toast from './components/templateliterals/Toast'
+import CustomButton from './components/html/Button'
 
 const App = () => {
 	const personName = { first: 'Asiisii', last: 'M' }
@@ -67,7 +68,17 @@ const App = () => {
 				onClick={item => console.log(item)}
 			/>
 			<RandomNumber value={10} isPositive />
-      <Toast position='center' />
+			<Toast position='center' />
+			<CustomButton variant='primary' onClick={() => console.log('clicked')}>
+				Primary button
+			</CustomButton>
+			{/* <CustomButton variant='primary' onClick={() => console.log('clicked')}>
+				{' '}
+				<div>Primary button</div>{' '}
+			</CustomButton> */}
+      {/* error: if we pass div elements because we have omit keyword thats omitting children from it being a componentprops */}
+			{/* This JSX tag's 'children' prop expects a single child of type 'string',
+			but multiple children were provided. */}
 		</div>
 	)
 }
