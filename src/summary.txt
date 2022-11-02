@@ -1,0 +1,20 @@
+summary
+- Basic & advanced props
+- Events & styles
+- useState
+- useReducer
+- Context Api
+- useRef
+- Class components
+- Components & props
+- Generics
+- Restricting props
+- template literals & exclude
+- wrapping html & Omit
+- extracting component prop types
+- Polymorphic components
+
+
+future 
+- make projects
+- learn more TS features
